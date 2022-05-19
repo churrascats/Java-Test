@@ -1,13 +1,15 @@
 
 package code;
 
-import code.Jackson.SuperClassJsonRepresentation.Test;
-import code.ShallowCopy.ShallowCopy;
+import java.lang.reflect.*;
+import java.util.Map;
+
+import code.JavaReflection.JavaReflectionTest;
 
 public class App {
 
-    public static void main(String[] args) throws InterruptedException{
-        
-            ShallowCopy.test();
+    public static void main(String[] args) throws InterruptedException {
+
+        JavaReflectionTest.test();
     }
 }

@@ -32,12 +32,10 @@ public class ShallowCopy {
 
             if (eventBatchCount >= 1) {
                 if (eventBatch.size() >= maxNumberOfEvents) {
-                    try {
-                        eventBatchList.add((RequestPayload) requestPayload.clone());
-                    } catch (CloneNotSupportedException e) {
-                        e.printStackTrace();
-                    }
-                    eventBatch =  new ArrayList<>();
+
+                    eventBatchList.add(requestPayload);
+
+                    eventBatch = new ArrayList<>();
                     eventBatchCount -= 1;
                 }
             } else {
